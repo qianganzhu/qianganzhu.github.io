@@ -359,7 +359,7 @@ function createServingRateGraph(svg_id, title){
             d3.select(this).style("fill", "gold");
         })
         .on("mouseout", function(d){
-            d3.select(this).style("fill", "crimson");
+            d3.select(this).style("fill", "steelblue");
         })
         .on("click", function(d){
             var idls = [];
@@ -372,7 +372,7 @@ function createServingRateGraph(svg_id, title){
                 .style("stroke", "rgb(51,102,153)")
                 .style("stroke-width", 1)
                 .data(idls, function(d1){return d1.id ? d1.id : d1;})
-                .style("stroke", "crimson")
+                .style("stroke", "steelblue")
                 .style("stroke-width", 4);
         });
     g.append("g")
