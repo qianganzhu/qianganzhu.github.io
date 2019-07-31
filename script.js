@@ -1,7 +1,7 @@
-var MANHATTAN_GEO_URL = "./manhattan.geojson"
-var REQUESTS_URL = "./requests.csv"
-var VEHICLE_EVENTS_URL = "./vehicle_events.csv"
-var VEHICLE_PATHS_URL = "./vehicle_paths_pnas.csv"
+var MANHATTAN_GEO_URL = "manhattan.geojson"
+var REQUESTS_URL = "requests.csv"
+var VEHICLE_EVENTS_URL = "vehicle_events.csv"
+var VEHICLE_PATHS_URL = "vehicle_paths_pnas.csv"
 
 Promise.all([
     d3.json(MANHATTAN_GEO_URL),
