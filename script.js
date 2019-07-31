@@ -139,8 +139,8 @@ function setTrigger(mtype){
         if(mtype == "serving"){
             serving_rate_select = mselect;
             updateTable("serving");
-            createServingRateGraph("serving_rate", "Serving Status Distrubution");
-            createServingRateGraph("serving_rate_percent", "Serving Status Percent Distrubution");
+            createServingRateGraph("serving_rate", "Serving Status Distribution");
+            createServingRateGraph("serving_rate_percent", "Serving Status Percent Distribution");
         }else{
             vehicle_paths_select = mselect;
             updateTable("rule");
@@ -191,8 +191,8 @@ function setTrigger(mtype){
                 .style("stroke", "rgb(51,102,153)")
                 .style("stroke-width", 1);
         if(mtype == "serving"){
-            createServingRateGraph("serving_rate", "Serving Status Distrubution");
-            createServingRateGraph("serving_rate_percent", "Serving Status Percent Distrubution");
+            createServingRateGraph("serving_rate", "Serving Status Distribution");
+            createServingRateGraph("serving_rate_percent", "Serving Status Percent Distribution");
             document.getElementById("rule_changebt").disabled = false;
         }else{
             createViolatingGraph();
@@ -215,8 +215,8 @@ function buildDomainNameByTime(mselect){
 function createChart(allData){
     initData(allData);
 
-    createServingRateGraph("serving_rate", "Serving Status Distrubution");
-    createServingRateGraph("serving_rate_percent", "Serving Status Percent Distrubution");
+    createServingRateGraph("serving_rate", "Serving Status Distribution");
+    createServingRateGraph("serving_rate_percent", "Serving Status Percent Distribution");
     createViolatingGraph();
     createMap();
 
@@ -544,5 +544,5 @@ function createViolatingGraph(){
     g.append("text")
         .attr("transform", "translate(" + (gWidth / 2) + ", " + (gHeight + gTopPadding + gBottomPadding + 5) + ")" )
         .attr("text-anchor", "middle")
-        .text(passanger_lower_num + "~" + passanger_higher_num + " Passangers Time Distrubution");
+        .text(passanger_lower_num + "~" + passanger_higher_num + " Passangers Time Distribution");
 }
