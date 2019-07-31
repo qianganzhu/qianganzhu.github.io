@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./d3.min.js"></script>
+  <script src="./d3-scale-chromatic.v1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./stylesheet.css"></link>
+  <meta name="viewport" content="width=device-width">
+  <title>Project</title>
+</head>
+<body>
+  <!-- <div style="width: 500px">
+    <p>You can freely adjust Bar Graph "Serving Status" and "Serving Status Percent" by hours as below:</p>
+    <div>
+      <p><button id="bt_change">change</button></p>
+      <table id="time_select">
+      </table>
+    </div>
+  </div> -->
+  <div style="width: 500px;">
+    <div style="width: 500px">
+      <p>You can change time period use "change" button. Note: input "24" as the end of this process.</p>
+      <p><button id="serving_changebt" disabled>Change Time Period</button>   <button id="serving_reset" disabled>Reset to 24 hours</button></p>
+      <p><span id="serving_begin">0</span>~<input id="serving_end" type="text" size="1" disabled></input>h         <button id="serving_addbt" disabled>Add Time Period</button></p>
+      <p>Current Time Period</p>
+      <table border="1" id="serving_table"></table>
+      <p><button id="serving_applybt" disabled>Apply Change</button></p>
+    </div>
+    <svg id="serving_rate"></svg>
+    <svg id="serving_rate_percent"></svg>
+    <p style="color: firebrick">The data(vehicle_paths_pnas.csv) shows that there are average 120k point should be rendered on the map for each hour. And there are so many of them that the pc respond slowly. For better render the data on the map in a reasonable speed. Please do not click the bar with too many rendered point.</p>
+    <div style="width: 500px">
+      <p>You can change time period use "change" button. Note: input "24" as the end of this process.</p>
+      <p><button id="rule_changebt" disabled>Change Time Period</button>   <button id="rule_reset" disabled>Reset to 24 hours</button></p>
+      <p><span id="rule_begin">0</span>~<input id="rule_end" type="text" size="1" disabled></input>h         <button id="rule_addbt" disabled>Add Time Period</button></p>
+      <p>Current Time Period</p>
+      <table border="1" id="rule_table"></table>
+      <p><button id="rule_applybt" disabled>Apply Change</button></p>
+      <p>You can select a range freely. Be carefull to choose a range because some range data are too huge.</p>
+      <p><input id="rule_lower_bound" type="text" size="1"></input>&#60;&#61;Number of Passanger&#60;&#61;<input id="rule_higher_bound" type="text" size="1"></input>      <button disabled id="rule_apply_bound">apply</button></button></p>
+    </div>
+    <svg id="violating_rule"></svg>
+  </div>
+  <div id="map_area_infor">
+    <p>Below Are The <span style="color: rgb(51,102,153);">Map Of City Manhatan</span></p>
+    <p>If you click one of bars on the left side. You will see bar data on the map.</p>
+  </div>
+  <div id="map_area">
+      <svg id="map"></svg>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
